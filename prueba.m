@@ -1,9 +1,10 @@
 clc
 clear all
 datos = load('redes3.mat');
-net = datos.arquitec.bestnnall(108).nn;
-
-
+net = datos.arquitec(25).bestnnall(187).nn;
+save('redoptimized.mat','net');
+bred = load('redoptimized.mat');
+net = bred.net
 load pactst.dat
 load tarpactstreal.dat
 
